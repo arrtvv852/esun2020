@@ -1,0 +1,14 @@
+python run_classifier.py --task_name binary \
+	  		  --do_train true \
+			  --do_eval true \
+			  --do_predict true \
+			  --data_dir ./data \
+			  --vocab_file ./pretrain_bert_chinese/vocab.txt \
+			  --bert_config_file ./pretrain_bert_chinese/bert_config.json \
+			  --init_checkpoint ./pretrain_bert_chinese/bert_model.ckpt \
+			  --max_seq_length 511 \
+			  --train_batch_size 5 \
+			  --learning_rate 2e-5 \
+			  --num_train_epochs 8.0 \
+			  --output_dir ./output \
+			  --export_dir ./output
